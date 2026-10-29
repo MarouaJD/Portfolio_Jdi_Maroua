@@ -86,7 +86,7 @@
         <a href="https://linkedin.com/in/maroua-jdi/" target="_blank">linkedin.com/in/maroua-jdi</a>
       </div>
       <div style="margin-top:2rem">
-        <a href="../uploads/CVmoi.pdf" download class="btn-o">
+        <a href="../uploads/Cv_Maroua%20JDI.pdf" download="Cv_Maroua JDI.pdf" class="btn-o">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span data-fr="Telecharger mon CV" data-en="Download my CV">Telecharger mon CV</span>
         </a>
@@ -156,6 +156,13 @@
 <script src="../js/particles.js"></script>
 <script src="../js/main.js"></script>
 <script>
+// ── THEME (dark / light) : meme logique que les autres pages ──
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+}
+if(localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+
 // ── ENVOI DU MESSAGE VIA WHATSAPP / SMS (aucun serveur requis) ──
 // Numero qui recoit les messages (meme que celui affiche sur le site)
 const OWNER_PHONE = '212681801838'; // format international sans "+"

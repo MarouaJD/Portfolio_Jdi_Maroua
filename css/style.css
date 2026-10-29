@@ -314,3 +314,19 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:3r
 @media(max-width:1180px){.orbit{--d:380px}}
 @media(max-width:1050px){.orbit{display:none}}
 .hero{overflow-x:clip}
+
+/* ── PHOTO VISIBLE SUR TELEPHONE / TABLETTE ── */
+@media(max-width:900px){
+  .hero-photo{display:block;order:-1;justify-self:center;margin:.5rem auto 1.6rem}
+  .photo-frame{width:260px;height:260px}
+  .photo-badge{right:50%;transform:translateX(50%);bottom:-18px;font-size:.58rem;padding:.5rem .8rem}
+  .orbit{display:block;--d:350px}
+  .hero-wrap{gap:2.5rem}
+}
+@media(max-width:700px){
+  .photo-frame{width:210px;height:210px}
+  .orbit{--d:290px}
+  .orbit-dash{inset:-14px}
+  .ob-in{font-size:.5rem;padding:.24rem .5rem}
+}
+@media(min-width:641px) and (max-width:900px){.hero{padding-top:200px}}
